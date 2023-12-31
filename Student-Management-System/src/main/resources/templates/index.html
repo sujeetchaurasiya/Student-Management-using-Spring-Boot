@@ -1,0 +1,92 @@
+<!doctype html >
+<html   xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
+<title>Add(J11)</title>
+</head>
+<body>
+	<!-- Navbar -->
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="/">Student Management System</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="/">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item active"><a style="color:black" class="nav-link" href="addstudent">Add Student</a></li>
+				<li class="nav-item active"><a class="nav-link" href="viewstudent">View Student</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="text-center text-primary">Student Details</h4>
+
+						<form th:action="@{/register}" th:object="${s}" method="post">
+
+							<div class="form-group">
+								<label for="fname">Full Name</label> <input type="text"
+									class="form-control" name="fname" >
+									
+							</div>
+
+							<div class="form-group">
+								<label>City</label> <input type="text"
+									class="form-control" name="city">
+							</div>
+
+							<div class="form-group">
+								<label>Email</label> <input type="text"
+									class="form-control" name="email">
+							</div>
+
+
+							<div class="form-group">
+								<label>Phone No</label> <input type="text"
+									class="form-control" name="mnum">
+							</div>
+
+
+							<div class="form-group">
+								<label for="course">Course</label> 
+								<select id="course" name="course">
+                                <option value="Mba">MBA</option>
+                                <option value="Mca">MCA</option>
+                                <option value="Bca">BCA</option>
+                                <option value="Bba">BBA</option>
+                              </select>
+							</div>
+
+							<button class="btn btn-primary btn-block">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
